@@ -1,0 +1,22 @@
+{
+  "name": "vagrant",
+  "version": "1.0.0",
+  "description": "HN Feed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfvalenzu/hnfeed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfvalenzu/hnfeed/issues"
+  },
+  "homepage": "https://github.com/jfvalenzu/hnfeed#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
