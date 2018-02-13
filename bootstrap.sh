@@ -10,12 +10,21 @@ apt-get install vim -y
 
 #sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 #echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 sudo apt-get update
 sudo apt-get install mongodb-org -y 
+sudo apt-get install mongodb-clients -y
+sudo apt-get install -y mongodb-org-mongos
+sudo apt-get install -y mongodb-org-shell
+sudo apt-get install -y mongodb-org-server
+sudo apt-get install -y mongodb-org-server-tools
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
 npm install express --save
+npm install express-generator -g
+npm install mongodb@2.2.33 --save
 #sudo apt-get install -y  mongodb-org-shell=2.6.9 
 #apt-get install -y openjdk-8-jdk maven  
 #sudo apt-get install -y postgis postgresql-9.5-postgis-2.2

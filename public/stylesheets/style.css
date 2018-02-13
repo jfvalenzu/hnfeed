@@ -1,0 +1,24 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+}
+
+li a {
+  color: #333;
+}
+
+
+li {
+    color: #333;
+    font-size: 13pt;
+    background-color: #fff;
+}
+
+li:hover{
+  background-color: #fafafa!important;    
+}
+
+.author{
+    color:#999!important;
+}

@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1= title
+  p We <3 hacker news!
+  
+  div(class="container")
+  
+      ul(class="list-group list-group-flush row")
+        each index in news
+            if !index.story_title && !index.title
+
+            else if index.story_title
+                li(class="hn-item list-group-item d-flex justify-content-between") 
+                    div(class="col-md-9") 
+                        a(href=index.story_url target="_blank") #{index.story_title} 
+                        span(class="author")  - #{index.author} 
+                        - 
+                          var time = moment(index.created_at).subtract(1, 'days').fromNow();
+                    div(class="col-md-2") 
+                        = time
+
+                    div(class="col-md-1") 
+                        a(class="nav-link", href='javascript://;' id=index._id)
+                            i(class="fa fa-trash" id=index._id)
+            else
+                li(class="list-group-item d-flex justify-content-between align-items-left") 
+                    div(class="col-md-9")
+                        a(href=index.url target="_blank") #{index.title} 
+                        span(class="author") #{index.author} 
+                        - 
+                          var time = moment(index.created_at).subtract(1, 'days').fromNow();
+                    div(class="col-md-2") 
+                        = time
+
+                    div(class="col-md-1") 
+                        a(class="nav-link", href='javascript://;')
+                            i(class="fa fa-trash" id=index._id)
