@@ -21,12 +21,12 @@ Vagrant.configure("2") do |config|
        config.vm.provider :"virtualbox"  do |provider, override|
         override.vm.box = 'geerlingguy/ubuntu1604'
        end	
-#  config.vm.define "mallplaza-giwer-api-digital-ocean" do |config|
+#config.vm.define "hnnews" do |config|
 #      config.vm.provider :digital_ocean do |provider, override|
 #        override.ssh.private_key_path = '~/.ssh/id_rsa'
 #        override.vm.box = 'digital_ocean'
 #        override.vm.box_url = "https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box"
-#        provider.token = '9809f8d3a45a2ad211fb94d8f2a0a95421e2902224719b4ee168a97600d994a7'
+#        provider.token = 'XXXXX'
 #        provider.image = 'ubuntu-16-04-x64'
 #        provider.region = 'nyc1'
 #        provider.size = '512MB'
